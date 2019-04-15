@@ -1,0 +1,29 @@
+plugins {
+    id 'org.springframework.boot' version '2.1.4.RELEASE'
+    id 'java'
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+group = 'com.nilanjan.oauth'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile "org.springframework.boot:spring-boot-starter-web",
+            "org.springframework.boot:spring-boot-starter-thymeleaf",
+            "org.springframework.boot:spring-boot-starter-security",
+            "org.springframework.boot:spring-boot-starter-oauth2-client",
+            "org.springframework:spring-webflux",
+            "org.thymeleaf.extras:thymeleaf-extras-springsecurity5",
+            "io.projectreactor.netty:reactor-netty"
+
+    testCompile "org.springframework.boot:spring-boot-starter-test",
+            "org.springframework.security:spring-security-test",
+            "junit:junit",
+            "org.assertj:assertj-core"
+}
